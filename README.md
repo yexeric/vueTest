@@ -1,6 +1,4 @@
-# hackathon
-
-> week1
+week1
 
 ## Build Setup
 
