@@ -1,5 +1,6 @@
 var path = require('path')
 var express = require('express')
+var api = require('../api')
 var webpack = require('webpack')
 var config = require('../config')
 var proxyMiddleware = require('http-proxy-middleware')
@@ -14,6 +15,9 @@ var port = process.env.PORT || config.dev.port
 var proxyTable = config.dev.proxyTable
 
 var app = express();
+
+// routing
+app.use('/api', api)
 
 var compiler = webpack(webpackConfig);
 
@@ -56,11 +60,6 @@ app.use(hotMiddleware)
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'));
-
-// routing
-app.get('/testRoute', function (req, res ) { 
-  res.send('Test Routing'); 
-});
 
 module.exports = app.listen(port, function (err) {
   if (err) {

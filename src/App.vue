@@ -3,6 +3,11 @@
     <increment></increment>
     <decrement></decrement>
     <counter></counter>
+    <h3> Upload File: </h3>
+    <form id = "uploadForm" enctype =  "multipart/form-data" action = "api/uploadFile" method = "post">
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" name="submit">
+    </form>
   </div>
 </template>
 
