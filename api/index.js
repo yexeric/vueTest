@@ -21,5 +21,4 @@ router.post('/uploadFile', upload.single('file'), function(req, res) {
     res.status(204).end()
 });
 
-
 module.exports = router;
