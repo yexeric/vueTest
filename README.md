@@ -1,7 +1,6 @@
-week2
+week1: Tried out Vue and Vuex
 
-Tested Vuex and Multer Upload Modules
-
+week2: Tried To Setup Correct Vuex Structure and Tested Out Multer Upload Modules
 
 ## Build Setup
 
