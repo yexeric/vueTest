@@ -1,14 +1,15 @@
 <template>
-  Count is {{ counter }}
+	<h3>Counter:</h3>
+    Count is {{ counterValue }}
 </template>
 
 <script>
-import store from '../store/store'
-
+import { getCount } from '../vuex/getters'
 export default {
-  computed: {
-    counter () {
-      return store.state.counter
+  vuex: {
+    getters: {
+      // note that you're passing the function itself, and not the value 'getCount()'
+      counterValue: getCount
     }
   }
 }

@@ -1,13 +1,14 @@
 <template>
-  <button @click.prevent="activate">Plus One</button>
+	<h3>Increment:</h3>
+	<button @click="plusOne">Plus One</button>
 </template>
 
 <script>
-	import store from '../store/store'
+	import { increment } from '../vuex/actions'
 	export default {
-	  methods: {
-	    activate () {
-	      store.dispatch('INCREMENT')
+	  vuex: {
+	    actions: {
+	      plusOne: increment
 	    }
 	  }
 	}
